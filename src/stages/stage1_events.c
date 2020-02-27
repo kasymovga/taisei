@@ -613,7 +613,7 @@ static int cirno_crystal_blizzard_proj(Projectile *p, int time) {
 TASK(crystal_wall, NO_ARGS) {
 	int num_crystals = difficulty_value(18, 21, 24, 27);
 	real spacing = VIEWPORT_W / (real)(num_crystals - 1);
-	real ofs = rng_real();
+	real ofs = rng_real() - 1;
 
 	for(int i = 0; i < 30; ++i) {
 		play_sound("shot1");
